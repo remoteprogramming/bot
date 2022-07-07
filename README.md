@@ -14,5 +14,5 @@ A lean bot to interact with Github projects
 
 1. Install Mob tool
 ```shell
-$ curl -sL install.mob.sh | sh
+$ curl -sL install.mob.sh | sh -s - --user
 ```
