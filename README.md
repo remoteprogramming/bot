@@ -7,7 +7,7 @@ A lean bot to interact with Github projects
 - NodeJS 16.16.0 LTS
 - ExpressJS 4.18.1
 - Git >=3.32
-- mob (to make mod programming easier)
+- mob (to make mob programming easier)
 
 
 ### Get started
