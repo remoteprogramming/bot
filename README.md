@@ -12,7 +12,9 @@ A lean bot to interact with Github projects
 
 ### Get started
 
-1. Install Mob tool
+1. Install Mob tool and Say command (tells you when it's your turn by using TTS)
 ```shell
+$ sudo apt install espeak
+$ ln -s /usr/bin/espeak ~/.local/bin/say
 $ curl -sL install.mob.sh | sh
 ```
