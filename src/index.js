@@ -1,11 +1,11 @@
-import { Client, Intents } from 'discord.js'
+import { SapphireClient } from '@sapphire/framework'
 /**TODO: 
  * Next session
  * Create a Config component
  */
 import 'dotenv/config'
 
-const client =  new Client({ intents: [Intents.FLAGS.GUILDS] })
+const client = new SapphireClient({ intents: [GatewayIntentBits.Guilds] });
 
 client.on('ready', () => {
   console.log("Bot is Running...")
