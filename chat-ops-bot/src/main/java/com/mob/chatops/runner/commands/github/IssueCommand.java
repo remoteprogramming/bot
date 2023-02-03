@@ -5,10 +5,11 @@ import com.mob.chatops.runner.MessageEventHandler;
 import org.springframework.stereotype.Component;
 
 @Component
-public class TaskCommand implements CommandRunner {
+public class IssueCommand implements CommandRunner {
+  
   @Override
   public boolean match(String messageContent){
-    return messageContent.startsWith("!issues");
+    return messageContent.startsWith("!issue-list");
   }
 
   public void run(MessageEventHandler messageEventHandler){
