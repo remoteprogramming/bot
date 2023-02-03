@@ -1,7 +1,7 @@
-package com.example.demo.runner.commands.github;
+package com.mob.chatops.runner.commands.github;
 
-import com.example.demo.runner.CommandRunner;
-import com.example.demo.runner.MessageEventHandler;
+import com.mob.chatops.runner.CommandRunner;
+import com.mob.chatops.runner.MessageEventHandler;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -12,6 +12,7 @@ public class TaskCommand implements CommandRunner {
   }
 
   public void run(MessageEventHandler messageEventHandler){
+    System.out.println("Running Issue Command");
     messageEventHandler.sendMessage("There's no issue yet");
   }
 }

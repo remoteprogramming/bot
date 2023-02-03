@@ -1,4 +1,4 @@
-package com.example.demo.runner;
+package com.mob.chatops.runner;
 
 public interface CommandRunner {
      boolean match(String messageContent);

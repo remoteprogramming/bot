@@ -1,7 +1,7 @@
-package com.example.demo.runner.impl;
+package com.mob.chatops.runner.impl;
 
-import com.example.demo.processor.impl.EventType;
-import com.example.demo.runner.MessageEventHandler;
+import com.mob.chatops.processor.impl.EventType;
+import com.mob.chatops.runner.MessageEventHandler;
 import lombok.Builder;
 import org.javacord.api.event.message.CertainMessageEvent;
 

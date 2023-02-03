@@ -1,8 +1,8 @@
-package com.example.demo.processor.impl;
+package com.mob.chatops.processor.impl;
 
-import com.example.demo.processor.CommandProcessor;
-import com.example.demo.runner.CommandRunner;
-import com.example.demo.runner.MessageEventHandler;
+import com.mob.chatops.processor.CommandProcessor;
+import com.mob.chatops.runner.CommandRunner;
+import com.mob.chatops.runner.MessageEventHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -17,7 +17,7 @@ public class CommandProcessorImpl implements CommandProcessor {
     @Override
     public void process(MessageEventHandler messageEvent) {
         CommandRunner selectedCommand = null;
-
+        System.out.println("Trying to match command");
         for(CommandRunner c : commands){
             if(c.match(messageEvent.getContent())){
                 selectedCommand = c;
@@ -26,6 +26,7 @@ public class CommandProcessorImpl implements CommandProcessor {
         }
 
         if(selectedCommand != null){
+            System.out.println("Command selected");
             selectedCommand.run(messageEvent);
         }
     }

@@ -1,6 +1,6 @@
-package com.example.demo.runner;
+package com.mob.chatops.runner;
 
-import com.example.demo.processor.impl.EventType;
+import com.mob.chatops.processor.impl.EventType;
 
 public interface MessageEventHandler {
     EventType getType();

@@ -1,7 +1,7 @@
-package com.example.demo.runner.commands;
+package com.mob.chatops.runner.commands;
 
-import com.example.demo.runner.CommandRunner;
-import com.example.demo.runner.MessageEventHandler;
+import com.mob.chatops.runner.CommandRunner;
+import com.mob.chatops.runner.MessageEventHandler;
 import org.springframework.stereotype.Component;
 
 import java.time.Instant;

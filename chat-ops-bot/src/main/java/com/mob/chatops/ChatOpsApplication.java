@@ -1,6 +1,5 @@
-package com.example.demo;
+package com.mob.chatops;
 
-import com.example.demo.listener.MessageListener;
 import org.javacord.api.DiscordApi;
 import org.javacord.api.DiscordApiBuilder;
 import org.javacord.api.listener.message.MessageCreateListener;
@@ -11,14 +10,13 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.env.Environment;
 
-import java.util.List;
 import java.util.Set;
 
 @SpringBootApplication
-public class DemoApplication {
+public class ChatOpsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+		SpringApplication.run(ChatOpsApplication.class, args);
 	}
 
 	@Autowired

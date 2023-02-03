@@ -1,6 +1,6 @@
-package com.example.demo.processor;
+package com.mob.chatops.processor;
 
-import com.example.demo.runner.MessageEventHandler;
+import com.mob.chatops.runner.MessageEventHandler;
 
 public interface CommandProcessor {
 

@@ -1,4 +1,4 @@
-package com.example.demo.processor.impl;
+package com.mob.chatops.processor.impl;
 
 public enum EventType {
     CREATE,

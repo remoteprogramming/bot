@@ -1,10 +1,9 @@
-package com.example.demo.listener.impl;
+package com.mob.chatops.listener.impl;
 
-import com.example.demo.listener.MessageListener;
-import com.example.demo.processor.CommandProcessor;
-import com.example.demo.processor.impl.EventType;
-import com.example.demo.runner.MessageEventHandler;
-import com.example.demo.runner.impl.MessageEventHandlerJavacord;
+import com.mob.chatops.processor.CommandProcessor;
+import com.mob.chatops.processor.impl.EventType;
+import com.mob.chatops.runner.MessageEventHandler;
+import com.mob.chatops.runner.impl.MessageEventHandlerJavacord;
 import org.javacord.api.event.message.MessageCreateEvent;
 import org.javacord.api.listener.message.MessageCreateListener;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +17,7 @@ public class MessageCreatedListenerJavacord implements MessageCreateListener {
 
     @Override
     public void onMessageCreate(MessageCreateEvent messageCreateEvent) {
+        System.out.println("Create message event received");
        //bring to domain and call processor
         MessageEventHandler messageEventHandler = MessageEventHandlerJavacord.builder()
                 .messageEvent(messageCreateEvent)
