@@ -1,4 +1,4 @@
-package com.example.demo.runner.commands;
+package com.example.demo.runner.commands.github;
 
 import com.example.demo.runner.CommandRunner;
 import com.example.demo.runner.MessageEventHandler;
@@ -11,7 +11,7 @@ public class TaskCommand implements CommandRunner {
     return messageContent.startsWith("!issues");
   }
 
-  public void run(String messageEventHandler){
-    return messageContent.sendMessage("There's no issue yet");
+  public void run(MessageEventHandler messageEventHandler){
+    messageEventHandler.sendMessage("There's no issue yet");
   }
 }

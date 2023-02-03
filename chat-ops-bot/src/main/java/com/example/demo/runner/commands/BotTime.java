@@ -10,7 +10,7 @@ import java.time.Instant;
 public class BotTime implements CommandRunner {
     @Override
     public boolean match(String messageContent) {
-        return messageContent.startsWith(".bottime");
+        return messageContent.startsWith("!bottime");
     }
 
     @Override

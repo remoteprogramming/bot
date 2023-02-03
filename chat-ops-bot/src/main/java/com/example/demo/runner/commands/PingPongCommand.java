@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class PingPongCommand implements CommandRunner {
     @Override
     public boolean match(String messageContent) {
-        return messageContent.startsWith(".ping");
+        return messageContent.startsWith("!ping");
     }
 
     @Override
