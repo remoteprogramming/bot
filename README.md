@@ -1,18 +1,12 @@
 # ChatOps bot
 
-### Description
-A lean bot to interact with Github projects
+## Requirements
+- Java 11
+- Maven
 
-### Requirements
-- NodeJS 16.16.0 LTS
-- ExpressJS 4.18.1
-- Git >=3.32
-- mob (to make mod programming easier)
+## FAQ
+1. I am get a `java.lang.NumberFormatException: For input string: "1674731088.876` when bot login to Discord ?
+R: It can happen when you are connected to a VPN, disconnect and run bot again
 
-
-### Get started
-
-1. Install Mob tool
-```shell
-$ curl -sL install.mob.sh | sh
-```
+2. I get `CloseCode(4014 / Disallowed intents` on bot connection 
+R: Make sure you marked **Present intent** and  **Server member instents**, under **Bot > Privileged Gateway Intents** in the Discord Developer Portal
