@@ -8,6 +8,8 @@ import org.javacord.api.event.message.CertainMessageEvent;
 @Builder
 public class MessageEventHandlerJavacord implements MessageEventHandler {
 
+    private Object extra;
+
     private CertainMessageEvent messageEvent;
     private EventType type;
 
@@ -24,5 +26,15 @@ public class MessageEventHandlerJavacord implements MessageEventHandler {
     @Override
     public void sendMessage(String message) {
         this.messageEvent.getChannel().sendMessage(message);
+    }
+
+    @Override
+    public void setExtra(Object extra) {
+        this.extra = extra;
+    }
+
+    @Override
+    public Object getExtra() {
+        return this.extra;
     }
 }

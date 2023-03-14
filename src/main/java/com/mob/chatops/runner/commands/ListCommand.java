@@ -4,9 +4,13 @@ import com.mob.chatops.runner.CommandRunner;
 import com.mob.chatops.runner.MessageEventHandler;
 import org.springframework.stereotype.Component;
 
+import java.util.Set;
+import java.util.stream.Collectors;
+
 @Component
-public class PingPongCommand implements CommandRunner {
-    private String name =  "!ping";
+public class ListCommand implements CommandRunner {
+    private String name = "!list";
+
     @Override
     public String getName() {
         return this.name;
@@ -14,7 +18,7 @@ public class PingPongCommand implements CommandRunner {
 
     @Override
     public String getDescription() {
-        return "returns pong";
+        return null;
     }
 
     @Override
@@ -24,6 +28,8 @@ public class PingPongCommand implements CommandRunner {
 
     @Override
     public void run(MessageEventHandler messageEventHandler) {
-        messageEventHandler.sendMessage("Pong");
+        Set<CommandRunner> commands = (Set<CommandRunner>) messageEventHandler.getExtra();
+        String commandsList = commands.stream().map(x -> x.getName() + " - " + x.getDescription()).collect(Collectors.joining("\n"));
+        messageEventHandler.sendMessage("Available commands: \n" + commandsList);
     }
 }

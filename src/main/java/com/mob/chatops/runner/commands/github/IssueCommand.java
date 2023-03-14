@@ -6,10 +6,22 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class IssueCommand implements CommandRunner {
-  
+
+  private String name = "!issue-list";
+
+  @Override
+  public String getName() {
+    return this.name;
+  }
+
+  @Override
+  public String getDescription() {
+    return null;
+  }
+
   @Override
   public boolean match(String messageContent){
-    return messageContent.startsWith("!issue-list");
+    return messageContent.startsWith(this.name);
   }
 
   public void run(MessageEventHandler messageEventHandler){

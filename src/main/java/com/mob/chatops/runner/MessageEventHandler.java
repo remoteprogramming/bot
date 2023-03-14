@@ -8,4 +8,8 @@ public interface MessageEventHandler {
     String getContent();
 
     void sendMessage(String message);
+
+    void setExtra(Object o);
+
+    Object getExtra();
 }
